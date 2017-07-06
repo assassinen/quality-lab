@@ -3,14 +3,8 @@ __author__ = 'NovikovII'
 # -*- coding: utf-8 -*-
 
 import pytest
-from selenium import webdriver
 from test_python.fixture.application import Application
 
-@pytest.fixture
-def driver(request):
-    driver = webdriver.Chrome()
-    request.addfinalizer(driver.quit)
-    return driver
 
 @pytest.fixture
 def app():
